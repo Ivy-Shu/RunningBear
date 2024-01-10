@@ -1,0 +1,73 @@
+body {
+    position: relative;
+    background-color: rgb(145, 197, 225);
+    width: 100vb;
+    height: 100vb;
+}
+
+.bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1920px;
+    height: 569px;
+    z-index: 2;
+}
+
+.bg1,
+.bg2 {
+    animation: bgmove 6s linear infinite;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.bg1 {
+    z-index: 2;
+    opacity: .95;
+}
+
+.bg2 {
+    z-index: 1;
+    opacity: .7;
+}
+
+.run {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    animation: move 6s linear forwards;
+    z-index: 3;
+}
+
+.bear {
+    animation: bear 1s steps(7) infinite;
+}
+
+@keyframes bear {
+    0% {}
+
+    100% {
+        transform: translateX(-1400px);
+    }
+}
+
+@keyframes move {
+    0% {}
+
+    100% {
+        transform: translate(600px);
+    }
+}
+
+@keyframes bgmove {
+    0% {}
+
+    100% {
+        transform: translate(-1920px);
+
+    }
+}
