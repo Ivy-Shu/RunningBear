@@ -1,22 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     position: relative;
     background-color: rgb(145, 197, 225);
-    width: 100vb;
-    height: 100vb;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.box {
+    text-align: center;
+}
+
+.title {
+    padding: 100px 0;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    color: #3d3d3d;
 }
 
 .bg {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 1920px;
-    height: 569px;
+    height: 100vh;
     z-index: 2;
 }
 
 .bg1,
 .bg2 {
-    animation: bgmove 6s linear infinite;
+    animation: bgmove 7s linear infinite;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -34,24 +52,26 @@ body {
 
 .run {
     position: absolute;
-    left: 0;
+    left: -200px;
     bottom: 0;
     width: 200px;
     height: 100px;
     overflow: hidden;
-    animation: move 6s linear forwards;
+    animation: move 7s linear infinite;
     z-index: 3;
 }
 
 .bear {
-    animation: bear 1s steps(7) infinite;
+    animation: bear 1s steps(8) infinite;
+    position: relative;
+    left: 0;
 }
 
 @keyframes bear {
     0% {}
 
     100% {
-        transform: translateX(-1400px);
+        transform: translateX(-1600px);
     }
 }
 
@@ -59,7 +79,7 @@ body {
     0% {}
 
     100% {
-        transform: translate(600px);
+        transform: translate(120vw);
     }
 }
 
@@ -67,7 +87,7 @@ body {
     0% {}
 
     100% {
-        transform: translate(-1920px);
+        transform: translate(-50%);
 
     }
 }
